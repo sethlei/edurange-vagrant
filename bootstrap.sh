@@ -8,4 +8,3 @@ chmod +x install.sh
 useradd -m -s /bin/bash -g sudo -u 1001 -p "$(openssl passwd -1 edurange)" edurange
 sudo su edurange
 sudo ./install.sh auto
-npm start
