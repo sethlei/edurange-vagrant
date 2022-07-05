@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-apt-get update && apt-get upgrade -y
+apt-get update
 apt-get install -y git
 useradd -m -s /bin/bash -g sudo -u 1001 -p "$(openssl passwd -1 edurange)" edurange
 sudo su edurange
@@ -11,6 +11,4 @@ sudo ./install.sh auto
 cd /home/vagrant
 chmod -R 777 ./edurange-flask
 chown -R vagrant:vagrant ./edurange-flask
-exit
-chmod 666 /var/run/docker.sock 
 cd /home/vagrant/edurange-flask
