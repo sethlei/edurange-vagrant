@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
+echo ${GITHUB_REF##*/}
 apt-get update && apt-get upgrade -y
 apt-get install -y git
 useradd -m -s /bin/bash -g sudo -u 1001 -p "$(openssl passwd -1 edurange)" edurange
 sudo su edurange
-git clone https://github.com/edurange/edurange-flask.git --recurse-submodules
+git clone https://github.com/edurange/edurange-flask.git --recurse-submodules -b ${GITHUB_REF##*/}
 cd edurange-flask
 chmod +x install.sh
 sudo ./install.sh auto
