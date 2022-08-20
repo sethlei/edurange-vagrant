@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-echo ${GITHUB_REF##*/}
+#echo ${GITHUB_REF##*/}
 
-echo ${BRANCH_NAME}
+echo REPLACE_ME
 
 apt-get update && apt-get upgrade -y
 apt-get install -y git
