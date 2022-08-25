@@ -1,12 +1,5 @@
 #!/bin/bash
 
-#echo ${GITHUB_REF##*/}
-echo $1
-echo REPLACE_ME
-
-echo "Changed to check for caching in github actions"
-echo $PWD
-
 apt-get update && apt-get upgrade -y
 apt-get install -y git
 useradd -m -s /bin/bash -g sudo -u 1001 -p "$(openssl passwd -1 edurange)" edurange

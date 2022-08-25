@@ -40,6 +40,7 @@ The presets chosen for this VM are done to make testing easier. They are not sec
 2. 'Vagrant ssh-config' - generates a SSH config you can use to connect to this VM. I use this when I connect Visual Studio Code to the container
 3. 'Vagrant scp' - Just like regular scp. Really useful for moving files between the host and container
 4. 'Vagrant status' or 'Vagrant global-status' - shows the status of the VMs running on the host
+5. Alter the Vagrantfile to allow access to port 5555 (for Flower)
 
 ## Vagrant says some port is in use. How do I fix this?
 1. Check the status of your vagrant VMs using 'vagrant global-status'
